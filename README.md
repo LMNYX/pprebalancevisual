@@ -17,7 +17,7 @@ osu! xexxar's skill rebalance visualisation for osu-web
 Credits go to [Xexxar](https://github.com/Xexxar) for rebalance and [Mr HeliX](https://osu.ppy.sh/users/2330619) for API.
 
 ## Example
-<img src="https://user-images.githubusercontent.com/13962537/130497610-41cc682e-cd26-4595-a1b2-d92db6544616.png">
+![prev](https://user-images.githubusercontent.com/13962537/130500303-7b4e9ebd-3322-4b09-ae05-9281dca6664d.png)
 
 ## Warning
 This script may slow down your osu-web experience if your internet is slow enough.
