@@ -18,3 +18,6 @@ Credits go to [Xexxar](https://github.com/Xexxar) for rebalance and [Mr HeliX](h
 
 ## Example
 <img src="https://user-images.githubusercontent.com/13962537/130497610-41cc682e-cd26-4595-a1b2-d92db6544616.png">
+
+## Warning
+This script may slow down your osu-web experience if your internet is slow enough.
