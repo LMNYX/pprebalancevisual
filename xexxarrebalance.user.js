@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Xexxar Rebalance Visual
-// @version      0.1
+// @version      0.1.2
 // @description  try to take over the world!
 // @author       mishashto
 // @match        https://osu.ppy.sh/*
@@ -59,7 +59,7 @@
         }
         async function addPPrebToProfile()
         {
-            var _lv = await fetch(`https://pp-api.huismetbenen.nl/player/${_userId}/xexxar-skills`, {
+            var _lv = await fetch(`https://pp-api.huismetbenen.nl/player/${_userId}/xexxar-skills?_=f${Math.random()}`, {
                 "credentials": "omit",
                 "headers": {
                     "User-Agent": "Needle/2.6.0 (Node.js ; undefined undefined)",
@@ -79,13 +79,13 @@
             var _acpHols = document.getElementsByClassName("profile-detail__col profile-detail__col--top-left")[0];
             var newPPh = document.createElement("div");
             newPPh.className = "profile-detail__top-left-item";
-            newPPh.innerHTML = `<div class="value-display value-display--pp"><div class="value-display__label">pp rebalance</div><div class="value-display__value"><div data-html-title="pp change: ${numberWithCommas(_lv['pp_change'])}<br><br>new pp incl. bonus: ${numberWithCommas(_lv['new_pp_incl_bonus'])}<br>new pp excl. bonus: ${numberWithCommas(_lv['new_pp_excl_bonus'])}<br><br>weighted acc pp: ${numberWithCommas(_lv['weighted_acc_pp'])}<br>weighted aim pp: ${numberWithCommas(_lv['weighted_aim_pp'])}<br>weighted acc pp: ${numberWithCommas(_lv['weighted_tap_pp'])}" data-orig-title="" title="" data-hasqtip="5" aria-describedby="qtip-5">${numberWithCommas(_lv['new_pp_incl_bonus'])}</div></div></div>`;
+            newPPh.innerHTML = `<div class="value-display value-display--pp"><div class="value-display__label">pp rebalance</div><div class="value-display__value"><div data-html-title="pp change: ${numberWithCommas(_lv['pp_change'])}<br><br>new pp incl. bonus: ${numberWithCommas(_lv['new_pp_incl_bonus'])}<br>new pp excl. bonus: ${numberWithCommas(_lv['new_pp_excl_bonus'])}<br><br>weighted acc pp: ${numberWithCommas(_lv['weighted_acc_pp'])}<br>weighted aim pp: ${numberWithCommas(_lv['weighted_aim_pp'])}<br>weighted tap pp: ${numberWithCommas(_lv['weighted_tap_pp'])}" data-orig-title="" title="" data-hasqtip="5" aria-describedby="qtip-5">${numberWithCommas(_lv['new_pp_incl_bonus'])}</div></div></div>`;
             _acpHols.append(newPPh);
         }
         addPPrebToProfile().then(()=>{}).catch(()=>{});
         async function reqReb()
         {
-            let _data = await fetch("https://pp-api.huismetbenen.nl/add-to-queue", {
+            let _data = await fetch("https://pp-api.huismetbenen.nl/add-to-queue?_=f${Math.random()}", {
                 "credentials": "omit",
                 "headers": {
                     "User-Agent": "Needle/2.6.0 (Node.js ; undefined undefined)",
