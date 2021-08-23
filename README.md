@@ -18,6 +18,9 @@ Credits go to [Xexxar](https://github.com/Xexxar) for rebalance and [Mr HeliX](h
 
 ## Example
 ![prev](https://user-images.githubusercontent.com/13962537/130500303-7b4e9ebd-3322-4b09-ae05-9281dca6664d.png)
+![prev2](https://user-images.githubusercontent.com/13962537/130502643-953fb1fc-491c-4e3c-a144-4819e512a201.png)
+![prev3](https://user-images.githubusercontent.com/13962537/130502689-f34a3716-41e7-417d-b881-4fd8cfd8cd40.png)
+![prev4](https://user-images.githubusercontent.com/13962537/130502598-35187137-1bed-4087-9463-4f9ef5496936.png)
 
 ## Warning
 This script may slow down your osu-web experience if your internet is slow enough.
