@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Xexxar Rebalance Visual
-// @version      0.1.3
+// @version      0.1.4
 // @description  try to take over the world!
 // @author       mishashto
 // @match        https://osu.ppy.sh/*
