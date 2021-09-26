@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Xexxar Rebalance Visual
-// @version      0.1.4
+// @version      0.1.5
 // @description  try to take over the world!
 // @author       mishashto
 // @match        https://osu.ppy.sh/*
@@ -59,7 +59,7 @@
         }
         async function addPPrebToProfile()
         {
-            var _lv = await fetch(`https://pp-api.huismetbenen.nl/player/${_userId}/xexxar-skills?_=f${Math.random()}`, {
+            var _lv = await fetch(`https://pp-api.huismetbenen.nl/player/${_userId}/xexxar_skills?_=f${Math.random()}`, {
                 "credentials": "omit",
                 "headers": {
                     "User-Agent": "Needle/2.6.0 (Node.js ; undefined undefined)",
@@ -76,6 +76,7 @@
                 "mode": "cors"
             });
             _lv = await _lv.json();
+          console.log(_lv);
             var _acpHols = document.getElementsByClassName("profile-detail__col profile-detail__col--top-left")[0];
             var newPPh = document.createElement("div");
             newPPh.className = "profile-detail__top-left-item";
@@ -97,7 +98,7 @@
                     "Sec-Fetch-Site": "same-site"
                 },
                 "referrer": "https://pp.huismetbenen.nl/",
-                "body": `user_id=${_userId}&algorithm=xexxar-skills`,
+                "body": `user_id=${_userId}&algorithm=xexxar_skills`,
                 "method": "PATCH",
                 "mode": "cors"
             });
@@ -108,7 +109,7 @@
         }
         if(_isInit)
             return;
-        document.querySelectorAll('[data-page-id="top_ranks"]')[1].getElementsByClassName("title title--page-extra-small")[0].innerHTML = document.querySelectorAll('[data-page-id="top_ranks"]')[1].getElementsByClassName("title title--page-extra-small")[0].innerHTML+` <a href="https://pp.huismetbenen.nl/player/${_userId}/xexxar-skills">(view rebalanced)</a>`;
+        document.querySelectorAll('[data-page-id="top_ranks"]')[1].getElementsByClassName("title title--page-extra-small")[0].innerHTML = document.querySelectorAll('[data-page-id="top_ranks"]')[1].getElementsByClassName("title title--page-extra-small")[0].innerHTML+` <a href="https://pp.huismetbenen.nl/player/${_userId}/xexxar_skills">(view rebalanced)</a>`;
         if(document.getElementsByClassName("btn-circle btn-circle--page-toggle btn-circle--page-toggle-detail js-click-menu").length > 0)
         {
             var _hasAddedRebalanceBtn = false;
@@ -127,7 +128,7 @@
                 _scores.innerText = "View new PP scores";
                 _scores.onclick = async function()
                 {
-                    window.location.href = `https://pp.huismetbenen.nl/player/${_userId}/xexxar-skills`;
+                    window.location.href = `https://pp.huismetbenen.nl/player/${_userId}/xexxar_skills`;
                 }
                 setTimeout(function(){ document.getElementsByClassName("simple-menu simple-menu--profile-page-bar js-click-menu js-click-menu--active")[0].append(_rebBtn);document.getElementsByClassName("simple-menu simple-menu--profile-page-bar js-click-menu js-click-menu--active")[0].append(_scores); }, 111);
                 _hasAddedRebalanceBtn = true;
