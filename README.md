@@ -1,3 +1,6 @@
+## DEPRECATION NOTICE
+This userscript is obselete and won't work, because peppy or someone from osu!team changed class names of entire profile section, I am too lazy to fix it, so it won't work anymore. Please use [Mr HeliX's website](https://pp.huismetbenen.nl/rankings/players/xexxar_skills)!
+
 # pprebalancevisual
 osu! xexxar's skill rebalance visualisation for osu-web
 
